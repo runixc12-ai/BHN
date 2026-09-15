@@ -7,6 +7,10 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Section } from "@/components/ui/Section";
 import { DIRECTORY_LISTINGS } from "@/lib/data";
 
+export function generateStaticParams() {
+  return DIRECTORY_LISTINGS.map((x) => ({ slug: x.slug }));
+}
+
 export function generateMetadata({
   params
 }: {
